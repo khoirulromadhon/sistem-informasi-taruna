@@ -54,3 +54,7 @@ Route::get('/nilai', function () {
 Route::get('/materi', function () {
     return view('layouts.materi.index');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
